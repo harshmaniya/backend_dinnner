@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 // const app = require('../app');
 
-const mongooseURL = `mongodb+srv://rms:maniya@cluster0.jill5yf.mongodb.net/rmsDB?retryWrites=true&w=majority`;
+const mongooseURL = process.env.DB_URL;
 
 const connectToMongo = () => {
     mongoose.connect(mongooseURL,{
